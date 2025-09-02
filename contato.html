@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Rodrigo - Soluções em Informática</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <img src="logo.jpeg" alt="Logo Rodrigo" class="logo">
+    <h1 class="titulo">𝓡𝓸𝓭𝓻𝓲𝓰𝓸 - 𝓢𝓸𝓵𝓾𝓬̧𝓸̃𝓮𝓼 𝓮𝓶 𝓘𝓷𝓯𝓸𝓻𝓶𝓪𝓽𝓲𝓬𝓪</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="trabalhos.html">Trabalhos</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main class="contato">
+    <h2><i class="fas fa-envelope"></i> Fale com a gente</h2>
+    <p>Envie sua mensagem direto para o WhatsApp preenchendo os campos abaixo:</p>
+
+    <form id="form-contato">
+      <label for="nome"><i class="fas fa-user"></i> Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email"><i class="fas fa-envelope"></i> E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensagem"><i class="fas fa-comment-dots"></i> Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+      <button type="submit"><i class="fab fa-whatsapp"></i> Enviar via WhatsApp</button>
+    </form>
+
+    <div class="redes-sociais">
+      <a href="https://wa.me/5511976817558" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://facebook.com/rodrigosolucoeseminformatica" target="_blank" class="facebook-btn"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="https://instagram.com/rodrigosolucoeseminformatica" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>#tecnologia #computadores #internet #notebooks #informática</p>
+  </footer>
+
+  <script>
+    document.getElementById('form-contato').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const mensagem = document.getElementById('mensagem').value;
+
+      const texto = `Olá Rodrigo!%0A%0ANome: ${nome}%0AE-mail: ${email}%0AMensagem: ${mensagem}`;
+      const url = `https://wa.me/5511976817558?text=${texto}`;
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>
