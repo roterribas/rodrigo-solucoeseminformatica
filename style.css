@@ -46,6 +46,10 @@ header {
   color: white;
 }
 
+nav {
+  margin-top: 40px;
+}
+
 nav a {
   margin: 0 15px;
   color: white;
