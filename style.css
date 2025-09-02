@@ -19,7 +19,7 @@ body {
 
 /* Cabeçalho */
 header {
-  background-color: rgba(255, 140, 0, 0.9);
+  background-color: rgba(255, 140, 0, 0.505);
   padding: 20px;
   width: 100%;
   text-align: center;
@@ -35,8 +35,9 @@ header {
 }
 
 .logo {
-  width: 60px;
+  width: 100px;
   height: auto;
+  border-radius: 10%;
 }
 
 .nome-site {
@@ -158,4 +159,67 @@ footer {
   padding: 10px;
   font-size: 14px;
   width: 100%;
+}
+
+/* ============================= */
+/* 📱 Responsividade para mobile */
+/* ============================= */
+@media (max-width: 768px) {
+  .topo {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nome-site {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 8px 0;
+    font-size: 16px;
+  }
+
+  main {
+    padding: 20px 15px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .trabalhos h2,
+  .contato h2 {
+    font-size: 22px;
+  }
+
+  .trabalhos li,
+  .contato p {
+    font-size: 15px;
+  }
+
+  input, textarea {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .whatsapp-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+
+  footer {
+    font-size: 13px;
+    padding: 8px;
+  }
 }
