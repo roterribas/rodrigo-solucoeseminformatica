@@ -1,10 +1,11 @@
-/* Reset básico */
+/* 🔄 Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* 🌐 Corpo da página */
 body {
   font-family: Arial, sans-serif;
   background-image: url('fundo.jpg');
@@ -15,136 +16,159 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  overflow-y: auto;
 }
 
-/* Cabeçalho */
+/* 🧢 Cabeçalho */
 header {
-  /* background-color: rgba(255, 140, 0, 0.505); */
-  padding: 20px;
-  width: 100%;
+  padding: 10px 40px;
+  width: 50%;
   text-align: center;
-  /* color: #daa520; */
-  color: transparente;
 }
 
 .titulo {
-  background-image: linear-gradient(to bottom, #FFD700, #DAA520); /* Gradiente dourado */
-  background-clip: text; /* Corta o fundo do texto */
-  color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+  font-size: 32px;
+  font-weight: bold;
+  background-image: linear-gradient(to bottom, #FFD700, #DAA520);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
+/* 🔝 Topo com logo e nome */
 .topo {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 10px;
+  gap: 10px;
+  margin-bottom: 5px;
+  flex-wrap: wrap;
 }
 
 .logo {
-  width: 200px;
+  width: 160px;
   height: auto;
   border-radius: 10%;
 }
 
 .nome-site {
-  font-size: 28px;
+  font-size: 26px;
   font-family: 'Cursive', sans-serif;
   color: white;
 }
 
+/* 🧭 Navegação fixa e alinhada */
 nav {
-  margin-top: 50px;
-  background-color: rgba(255, 140, 0, 0.505);
-  margin-left: 20%;
-  margin-right: 20%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 140, 0, 0.9);
+  padding: 10px;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.nav-container {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 nav a {
-  margin: 0 50px;
   color: black;
   text-decoration: none;
   font-weight: bold;
-  font-size: 20px;
-  border: 1px solid orange;
+  font-size: 18px;
+  border: 2px solid orange;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-/* Conteúdo principal */
+nav a:hover {
+  background-color: #ffa733;
+}
+
+/* 🧱 Conteúdo principal */
 main {
-  padding: 40px 20px;
-  background-color: rgba(255, 255, 255, 0.662);
+  max-width: 900px;
   width: 100%;
-  max-width: 800px;
-  min-height: 60vh;
-  text-align: center;
+  margin: 20px auto 20px auto; /* espaço para o menu fixo */
+  padding: 30px 15px;
+  background-color: rgba(255, 255, 255, 0.85);
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-/* Página de trabalhos */
+/* 🛠️ Seção Trabalhos */
 .trabalhos h2 {
-  font-size: 26px;
-  margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 15px;
   color: #FF8C00;
 }
 
 .trabalhos ul {
-  list-style-type: none;
-  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+  list-style: none;
+
 }
 
 .trabalhos li {
-  background-color: #ffffff63;
-  margin: 10px 0;
-  padding: 15px 20px;
-  border-left: 5px solid #FF8C00;
+  width: 160px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 12px;
+  border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  font-size: 16px;
-  line-height: 1.6;
+  text-align: center;
   transition: transform 0.2s ease;
-  text-align: left;
+  border-top:  5px solid orange;
 }
 
 .trabalhos li:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 
 .trabalhos img {
- font-size: 64px;
-  /* color: red; */
-  /* background-color: yellow; */
-  display: inline-flex;
-  line-height: 2px;
-  padding: 1px;
-  border-radius: 5px; 
-  width: 100px;
-  height: 100px;  
+  width: 60px;
+  height: 60px;
+  margin-bottom: 8px;
 }
 
-/* Página de contato */
+/* 📞 Seção Contato */
 .contato h2 {
   color: #FF8C00;
-  font-size: 26px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
 .contato p {
-  margin-bottom: 20px;
-  font-size: 16px;
+  margin-bottom: 15px;
+  font-size: 15px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
   text-align: left;
 }
 
 input, textarea {
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 15px;
+  font-size: 14px;
   width: 100%;
 }
 
@@ -152,9 +176,9 @@ button {
   background-color: #FF8C00;
   color: white;
   border: none;
-  padding: 12px;
+  padding: 10px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -163,15 +187,15 @@ button:hover {
   background-color: #e67600;
 }
 
-/* Botão WhatsApp */
+/* 💬 Botão WhatsApp */
 .whatsapp-btn {
   display: inline-block;
   background-color: #25D366;
   color: white;
-  padding: 10px 20px;
+  padding: 8px 16px;
   text-decoration: none;
   border-radius: 5px;
-  margin-top: 15px;
+  margin-top: 12px;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
@@ -180,80 +204,71 @@ button:hover {
   background-color: #1ebe5d;
 }
 
-/* Rodapé */
+/* 🧦 Rodapé */
 footer {
   background-color: #f0f0f0cb;
   text-align: center;
-  padding: 10px;
-  font-size: 14px;
+  padding: 8px;
+  font-size: 13px;
   width: 100%;
+  margin-top: 20px;
 }
 
-/* index */
-
-/* .inicio {
-  width: 200px;
-} */
-
-/* ============================= */
-/* 📱 Responsividade para mobile */
-/* ============================= */
+/* 📱 Responsividade */
 @media (max-width: 768px) {
   .topo {
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
 
   .nome-site {
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
   }
 
-  nav {
-    display: flex;
+  .nav-container {
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
+    gap: 8px;
   }
 
   nav a {
-    margin: 8px 0;
     font-size: 16px;
+    padding: 8px;
   }
 
   main {
-    padding: 20px 15px;
+    padding: 20px 10px;
     border-radius: 0;
     box-shadow: none;
   }
 
-  .trabalhos h2,
-  .contato h2 {
-    font-size: 22px;
+  .trabalhos ul {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .trabalhos li,
-  .contato p {
-    font-size: 15px;
+  .trabalhos li {
+    width: 100%;
   }
 
   input, textarea {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   button {
-    font-size: 15px;
-    padding: 10px;
+    font-size: 14px;
+    padding: 8px;
   }
 
   .whatsapp-btn {
     width: 100%;
     text-align: center;
-    padding: 12px;
+    padding: 10px;
   }
 
   footer {
-    font-size: 13px;
-    padding: 8px;
+    font-size: 12px;
+    padding: 6px;
   }
 }
