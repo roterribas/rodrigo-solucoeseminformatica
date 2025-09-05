@@ -108,9 +108,9 @@ main {
   text-align: center;
 }
 
-.apresentacao p {
+.mim {
   font-size: 15px;
-  text-align: center;
+  text-align: left;
 }
 
 /* 🛠️ Seção Trabalhos */
@@ -132,13 +132,13 @@ main {
 
 .trabalhos li {
   width: 160px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0);
   padding: 12px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.65);
   text-align: center;
   transition: transform 0.2s ease;
-  border-top:  5px solid orange;
+  border-top:  5px solid rgb(255, 141, 1);
 }
 
 .trabalhos li:hover {
