@@ -108,6 +108,11 @@ main {
   text-align: center;
 }
 
+.apresentacao p {
+  font-size: 15px;
+  text-align: center;
+}
+
 /* 🛠️ Seção Trabalhos */
 .trabalhos h2 {
   font-size: 24px;
