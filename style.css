@@ -1,21 +1,18 @@
-/* =========================
-   RESET BÁSICO
-========================= */
+/* ==========================================================================
+   1. RESET BÁSICO E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================
-   CONFIGURAÇÃO GERAL
-========================= */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif; /* Fonte mais moderna e profissional */
   background-image: url('fundo.jpg');
   background-size: cover;
   background-position: center;
@@ -26,23 +23,24 @@ body {
   line-height: 1.6;
 }
 
-/* =========================
-   CABEÇALHO
-========================= */
+/* ==========================================================================
+   2. CABEÇALHO E TÍTULO LUXUOSO (Dourado de Convite de Casamento)
+   ========================================================================== */
 header {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 20px 15px 10px;
+  padding: 25px 15px 15px;
   text-align: center;
 }
 
 .logo {
-  width: 160px;
+  width: 150px;
   max-width: 100%;
   height: auto;
-  border-radius: 10%;
-  margin: 0 auto 10px;
+  border-radius: 12px;
+  margin: 0 auto 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
 }
 
@@ -50,440 +48,434 @@ header {
   transform: scale(1.03);
 }
 
+/* Título Cursivo Sofisticado em Ouro Nobre com Sombra de Fundo Reforçada */
 .titulo {
-  font-size: 32px;
-  font-weight: bold;
-  background-image: linear-gradient(to bottom, #FFD700, #DAA520);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  margin-top: 10px;
-  line-height: 1.3;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+  color: #D4AF37; /* Tom de Ouro de Alta Qualidade */
+  font-family: 'Georgia', 'Brush Script MT', 'Lucida Handwriting', cursive;
+  font-style: italic;
+  font-size: 36px;
+  font-weight: normal;
+  margin-bottom: 20px;
+  
+  /* Contorno escuro em várias direções para criar uma sombra de fundo nítida */
+  text-shadow: 
+    2px 2px 3px rgba(0, 0, 0, 0.95),
+    -1px -1px 2px rgba(0, 0, 0, 0.9),
+    1px -1px 2px rgba(0, 0, 0, 0.9),
+    -1px 1px 2px rgba(0, 0, 0, 0.9),
+    0px 3px 6px rgba(0, 0, 0, 0.95);
 }
 
-.topo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 5px;
-  flex-wrap: wrap;
-}
-
-.nome-site {
-  font-size: 26px;
-  font-family: cursive;
-  color: white;
-}
-
-/* =========================
-   NAVEGAÇÃO
-========================= */
+/* ==========================================================================
+   3. NAVEGAÇÃO / MENU
+   ========================================================================== */
 nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: rgba(255, 140, 0, 0.92);
-  padding: 12px 18px;
-  margin: 25px auto 0;
-  border-radius: 10px;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.18);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  width: fit-content;
-  max-width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 24px;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 nav a {
-  color: #111;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 17px;
-  padding: 8px 14px;
-  border-radius: 6px;
-  position: relative;
-  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 14px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 nav a:hover {
-  background-color: #ffa733;
-  transform: translateY(-1px);
+  color: #25d366;
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 4px;
-  height: 2px;
-  background-color: rgba(0, 0, 0, 0.35);
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.3s ease;
-}
-
-nav a:hover::after {
-  transform: scaleX(1);
-}
-
-/* =========================
-   CONTEÚDO PRINCIPAL
-========================= */
+/* ==========================================================================
+   4. CONTEÚDO PRINCIPAL (MAIN E SECÇÕES PROFISSIONAIS)
+   ========================================================================== */
 main {
-  max-width: 950px;
-  width: calc(100% - 24px);
-  margin: 20px auto;
-  padding: 30px 20px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.88));
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-  text-align: center;
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  width: 100%;
+  max-width: 850px;
+  margin: 30px auto 50px;
+  background-color: rgba(255, 255, 255, 0.97); /* Fundo ligeiramente mais opaco para melhor leitura */
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
-.apresentacao h2,
-.trabalhos h2,
-.contato h2 {
-  font-size: 28px;
-  margin-bottom: 14px;
-  color: #FF8C00;
-  position: relative;
-  display: inline-block;
+section {
+  margin-bottom: 35px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  border-bottom: 3px solid #25d366;
   padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.apresentacao h2::after,
-.trabalhos h2::after,
-.contato h2::after {
-  content: "";
-  display: block;
-  width: 60%;
-  height: 3px;
-  margin: 8px auto 0;
-  border-radius: 999px;
-  background: linear-gradient(to right, #ff8c00, #ffd700);
+p {
+  margin-bottom: 18px;
+  text-align: justify;
+  color: #444;
+  font-size: 15.5px;
 }
 
-.apresentacao p {
-  margin-bottom: 14px;
+ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
 }
 
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Imagens das páginas */
 .apresentacao img {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-  border: 3px solid rgba(255, 140, 0, 0.18);
-  transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
-}
-
-.apresentacao img:hover {
-  transform: scale(1.01);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
-  opacity: 0.98;
-}
-
-/* =========================
-   SOBRE MIM
-========================= */
-.mim {
-  font-size: 16px;
-  line-height: 1.7;
-  text-align: left;
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.mim p {
-  margin-bottom: 16px;
-}
-
-.mim ul {
-  margin: 15px 0 18px 22px;
-  padding-left: 5px;
-}
-
-.mim li {
-  margin-bottom: 10px;
-}
-
-.mim li::marker {
-  color: #ff8c00;
-}
-
-.mim strong {
-  color: #c96f00;
-}
-
-.mim a {
-  color: #c96f00;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-.mim a:hover {
-  color: #8a4d00;
-  text-decoration: underline;
-}
-
-/* =========================
-   SEÇÃO TRABALHOS
-========================= */
-.trabalhos h2 {
-  font-size: 24px;
-  margin-bottom: 15px;
-  color: #FF8C00;
-}
-
-.trabalhos ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 18px;
-  padding: 10px 0;
-  list-style: none;
-}
-
-.trabalhos li {
-  width: 180px;
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 14px;
-  border-radius: 18px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.22);
-  text-align: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  border-top: 5px solid rgb(255, 141, 1);
-}
-
-.trabalhos li:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.28);
+  border-radius: 8px;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .trabalhos img {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 8px;
-}
-
-/* =========================
-   CONTATO
-========================= */
-.contato h2 {
-  color: #FF8C00;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.contato p {
-  margin-bottom: 15px;
-  font-size: 16px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  text-align: left;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-input,
-textarea {
-  padding: 10px 12px;
-  border: 1px solid #ccc;
+  max-width: 100%;
+  height: auto;
   border-radius: 6px;
-  font-size: 16px;
-  width: 100%;
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.92);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+  display: inline-block;
 }
 
-input:focus,
-textarea:focus {
-  border-color: #FF8C00;
-  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.15);
+/* Estilização da Secção "Sobre Mim" */
+.mim p {
+  margin-bottom: 14px;
 }
 
-textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-button {
-  background-color: #FF8C00;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 6px;
-  font-size: 16px;
+.mim a {
+  color: #0066cc;
+  text-decoration: none;
   font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 3px 8px rgba(255, 140, 0, 0.22);
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
-  background-color: #e67600;
-  transform: translateY(-1px);
+.mim a:hover {
+  text-decoration: underline;
 }
 
-/* =========================
-   BOTÃO WHATSAPP
-========================= */
+/* ==========================================================================
+   5. COMPONENTES DO TEU CURRÍCULO (FLEXBOX E CARDS ATIVADOS)
+   ========================================================================== */
+.perfil-profissional h3 {
+  margin: 30px 0 15px;
+  color: #222;
+  font-size: 19px;
+  border-left: 4px solid #0066cc;
+  padding-left: 10px;
+}
+
+/* Contentores em Colunas Alinhadas */
+.cv-cards-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.cv-card {
+  flex: 1;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  border-top: 4px solid #25d366;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease;
+}
+
+.cv-card:hover {
+  transform: translateY(-3px);
+}
+
+.cv-card h4 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.cv-card ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.cv-card ul li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-align: left;
+  position: relative;
+  padding-left: 15px;
+}
+
+.cv-card ul li::before {
+  content: "■";
+  color: #25d366;
+  font-size: 10px;
+  position: absolute;
+  left: 0;
+  top: 1px;
+}
+
+/* Layout de Duas Colunas (Formação e Histórico) */
+.cv-duas-colunas {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.cv-duas-colunas .coluna {
+  flex: 1;
+}
+
+.lista-cv {
+  list-style: none;
+  padding-left: 0;
+}
+
+.lista-cv li {
+  margin-bottom: 14px;
+  font-size: 14.5px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.lista-cv li i {
+  color: #0066cc;
+  margin-top: 4px;
+  font-size: 15px;
+}
+
+/* Links em Formato Pílula Moderna para os Portfólios */
+.links-portfolio {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0 35px;
+}
+
+.link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f1f3f5;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #495057;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid #dee2e6;
+  transition: all 0.2s ease;
+}
+
+.link-item:hover {
+  background-color: #0066cc;
+  color: #fff;
+  border-color: #0066cc;
+  transform: translateY(-2px);
+}
+
+.link-item i {
+  font-size: 16px;
+}
+
+/* Botão de Orçamento Centralizado */
+.btn-centralizado {
+  text-align: center;
+  margin-top: 30px;
+}
+
 .whatsapp-btn {
   display: inline-block;
-  background-color: #25D366;
-  color: white;
-  padding: 10px 18px;
-  text-decoration: none;
-  border-radius: 6px;
-  margin-top: 14px;
+  background-color: #25d366;
+  color: #fff;
+  padding: 14px 30px;
+  font-size: 17px;
   font-weight: bold;
-  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.25);
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
 }
 
 .whatsapp-btn:hover {
-  background-color: #1ebe5d;
-  transform: translateY(-1px);
-  box-shadow: 0 8px 16px rgba(37, 211, 102, 0.32);
+  background-color: #1ed760;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(37, 211, 102, 0.4);
 }
 
-/* =========================
-   RODAPÉ
-========================= */
-footer {
-  background-color: rgba(240, 240, 240, 0.85);
-  text-align: center;
-  padding: 10px;
-  font-size: 13px;
+/* ==========================================================================
+   6. PÁGINA DE CONTATO
+   ========================================================================== */
+.contato form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contato label {
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.contato input,
+.contato textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
   width: 100%;
-  margin-top: 20px;
-  backdrop-filter: blur(3px);
-  border-top: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-/* =========================
-   RESPONSIVIDADE
-========================= */
+.contato input:focus,
+.contato textarea:focus {
+  outline: none;
+  border-color: #25d366;
+  box-shadow: 0 0 5px rgba(37, 211, 102, 0.5);
+}
+
+.contato button {
+  background-color: #25d366;
+  color: #fff;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.contato button:hover {
+  background-color: #1ed760;
+}
+
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.redes-sociais a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.facebook-btn { background-color: #3b5998; }
+.instagram-btn { background-color: #e1306c; }
+
+/* ==========================================================================
+   7. RODAPÉ PROFISSIONAL COM BARRRA DE FUNDO DEDICADA
+   ========================================================================== */
+footer {
+  background-color: rgba(0, 0, 0, 0.75); /* Barra escura sólida e moderna */
+  text-align: center;
+  padding: 20px 15px;
+  color: #ffffff;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 50px;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+  clear: both;
+}
+
+footer p {
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 1.2px;
+}
+
+/* ==========================================================================
+   8. RESPONSIVIDADE (MOBILE TOTALMENTE CORRIGIDO)
+   ========================================================================== */
 @media (max-width: 768px) {
+  .cv-cards-container,
+  .cv-duas-colunas {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .links-portfolio {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .link-item {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
   body {
     background-attachment: scroll;
   }
 
   header {
-    padding: 16px 10px 8px;
+    padding: 15px 10px 5px;
   }
 
   .logo {
-    width: 130px;
+    width: 120px;
   }
 
   .titulo {
-    font-size: 24px;
-  }
-
-  .topo {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .nome-site {
-    font-size: 20px;
-    text-align: center;
+    font-size: 26px;
   }
 
   nav {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    max-width: 320px;
-    margin: 18px auto 0;
-    gap: 8px;
+    max-width: 280px;
+    margin: 15px auto 0;
+    gap: 5px;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 12px;
   }
 
   nav a {
-    font-size: 16px;
-    padding: 8px 10px;
+    font-size: 15px;
+    padding: 6px 0;
     width: 100%;
     text-align: center;
+    margin: 0;
   }
 
   main {
-    width: calc(100% - 16px);
-    padding: 22px 14px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+    width: calc(100% - 20px);
+    padding: 20px 15px;
+    border-radius: 12px;
   }
 
-  .apresentacao h2,
-  .trabalhos h2,
-  .contato h2 {
-    font-size: 24px;
-  }
-
-  .mim {
-    font-size: 16px;
-    line-height: 1.75;
-  }
-
-  .trabalhos ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .trabalhos li {
+  .redes-sociais a {
     width: 100%;
-    max-width: 320px;
-  }
-
-  input,
-  textarea,
-  button {
-    font-size: 16px;
-  }
-
-  .whatsapp-btn {
-    width: 100%;
-    max-width: 320px;
-    text-align: center;
-    padding: 12px;
-  }
-
-  footer {
-    font-size: 12px;
-    padding: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .titulo {
-    font-size: 20px;
-  }
-
-  .apresentacao h2,
-  .trabalhos h2,
-  .contato h2 {
-    font-size: 22px;
-  }
-
-  main {
-    padding: 18px 12px;
-  }
-
-  .mim {
-    font-size: 15.5px;
+    justify-content: center;
   }
 }

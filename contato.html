@@ -2,14 +2,18 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rodrigo - Soluções em Informática</title>
+  
+  <link rel="icon" type="image/jpeg" href="logo.jpeg">
+  
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
     <img src="logo.jpeg" alt="Logo Rodrigo" class="logo">
-    <h1 class="titulo">𝓡𝓸𝓭𝓻𝓲𝓰𝓸 - 𝓢𝓸𝓵𝓾𝓬̧𝓸̃𝓮𝓼 𝓮𝓶 𝓘𝓷𝓯𝓸𝓻𝓶𝓪𝓽𝓲𝓬𝓪 🖥️</h1>
+    <h1 class="titulo">Rodrigo - Soluções em Informática 🖥️</h1>
     <nav>
       <a href="index.html">Início</a>
       <a href="trabalhos.html">Trabalhos</a>
@@ -35,9 +39,9 @@
     </form>
 
     <div class="redes-sociais">
-      <a href="https://wa.me/5511976817558" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      <a href="https://facebook.com/rodrigosolucoeseminformatica" target="_blank" class="facebook-btn"><i class="fab fa-facebook-f"></i> Facebook</a>
-      <a href="https://instagram.com/rodrigosolucoeseminformatica" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://wa.me/5511976817558" target="_blank" rel="noopener noreferrer" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://facebook.com/rodrigosolucoeseminformatica" target="_blank" rel="noopener noreferrer" class="facebook-btn"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="https://instagram.com/rodrigosolucoeseminformatica" target="_blank" rel="noopener noreferrer" class="instagram-btn"><i class="fab fa-instagram"></i> Instagram</a>
     </div>
   </main>
 
@@ -48,12 +52,17 @@
   <script>
     document.getElementById('form-contato').addEventListener('submit', function(e) {
       e.preventDefault();
-      const nome = document.getElementById('nome').value;
-      const email = document.getElementById('email').value;
-      const mensagem = document.getElementById('mensagem').value;
-
-      const texto = `Olá Rodrigo!%0A%0ANome: ${nome}%0AE-mail: ${email}%0AMensagem: ${mensagem}`;
-      const url = `https://wa.me/5511976817558?text=${texto}`;
+      
+      const nome = encodeURIComponent(document.getElementById('nome').value);
+      const email = encodeURIComponent(document.getElementById('email').value);
+      const mensagem = encodeURIComponent(document.getElementById('mensagem').value);
+      
+      const numeroWhats = "5511976817558";
+      
+      const textoMensagem = `Olá, meu nome é ${nome}. Meu e-mail é ${email}.%0A%0AMensagem:%0A${mensagem}`;
+      
+      const url = `https://wa.me/${numeroWhats}?text=${textoMensagem}`;
+      
       window.open(url, '_blank');
     });
   </script>
