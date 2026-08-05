@@ -4,6 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Meta tags para SEO -->
+  <meta name="description" content="Serviços de informática: manutenção de computadores, redes, suporte técnico, segurança digital e servidores em Carapicuíba - SP.">
+  <meta name="keywords" content="serviços de informática, manutenção de computadores, redes, suporte técnico, segurança digital, servidores, Carapicuíba">
+  <meta name="author" content="Rodrigo Terribas Saraiva">
+  <meta name="robots" content="index, follow">
+
+  <!-- Meta tags para compartilhamento em redes sociais (Open Graph) -->
+  <meta property="og:title" content="Serviços de Informática - Rodrigo Soluções em Informática">
+  <meta property="og:description" content="Conheça os serviços especializados em informática, redes e infraestrutura que ofereço.">
+  <meta property="og:image" content="https://seusite.com/logo.jpeg">
+  <meta property="og:url" content="https://seusite.com/trabalhos.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Rodrigo - Soluções em Informática">
+
+  <!-- Meta tags para Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Serviços de Informática - Rodrigo Soluções em Informática">
+  <meta name="twitter:description" content="Conheça os serviços especializados em informática, redes e infraestrutura que ofereço.">
+
   <title>Trabalhos - Rodrigo Soluções em Informática</title>
   
   <link rel="icon" type="image/jpeg" href="logo.jpeg">
@@ -15,42 +35,116 @@
 <body>
   <header>
     <img src="logo.jpeg" alt="Logo Rodrigo" class="logo">
-    <h1 class="titulo">Rodrigo - Soluções em Informática 🖥️</h1>
     <nav>
       <a href="index.html">Início</a>
-      <a href="trabalhos.html">Trabalhos</a>
+      <a href="trabalhos.html" class="active">Trabalhos</a>
       <a href="contato.html">Contato</a>
     </nav>
   </header>
 
-  <main class="trabalhos">
-    <h2><i class="fas fa-briefcase"></i> O que eu faço / Portfólio de Serviços</h2>
-    <p>Oferecemos serviços técnicos especializados com foco em eficiência, segurança e alta disponibilidade para o seu ambiente residencial ou corporativo.</p>
-    
-    <div class="cv-cards-container" style="margin-top: 25px;">
+  <main>
+    <section class="perfil-profissional">
+      <h2><i class="fas fa-briefcase"></i> O que eu faço / Portfólio de Serviços</h2>
+      <p style="text-align: center; font-size: 1.1rem; margin-bottom: 30px;">
+        Ofereço serviços técnicos especializados com foco em eficiência, segurança e alta disponibilidade para o seu ambiente residencial ou corporativo.
+      </p>
       
-      <div class="cv-card">
-        <h4><i class="fas fa-laptop-medical"></i> Manutenção de Microcomputadores Particulares</h4>
-        <p style="font-size: 14px; margin-top: 10px; color: #555; text-align: left;">
-          Diagnóstico preciso, substituição de componentes danificados, limpeza interna preventiva, aplicação de pasta térmica de alta performance e upgrade de hardware (SSD, Memória RAM) para acelerar o seu computador ou notebook.
-        </p>
-        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQ..." alt="Manutenção de Computadores">
+      <div class="cv-cards-container">
+        <!-- Card 1: Manutenção de Computadores -->
+        <div class="cv-card">
+          <h4><i class="fas fa-laptop-medical"></i> Manutenção de Computadores</h4>
+          <ul>
+            <li>Diagnóstico preciso de hardware e software</li>
+            <li>Substituição de componentes danificados</li>
+            <li>Limpeza interna preventiva</li>
+            <li>Aplicação de pasta térmica de alta performance</li>
+            <li>Upgrade de hardware (SSD, Memória RAM)</li>
+            <li>Otimização de desempenho</li>
+          </ul>
+          <div style="margin-top: 15px; text-align: center;">
+            <i class="fas fa-desktop" style="font-size: 50px; color: #1a2a6c; opacity: 0.6;"></i>
+          </div>
+        </div>
+
+        <!-- Card 2: Redes e Infraestrutura -->
+        <div class="cv-card">
+          <h4><i class="fas fa-network-wired"></i> Redes e Infraestrutura</h4>
+          <ul>
+            <li>Planejamento e instalação de redes locais</li>
+            <li>Configuração avançada de roteadores e switches</li>
+            <li>Instalação de repetidores Wi-Fi</li>
+            <li>Segmentação de redes (VLAN)</li>
+            <li>Garantia de cobertura e velocidade estável</li>
+            <li>Segurança contra intrusos</li>
+          </ul>
+          <div style="margin-top: 15px; text-align: center;">
+            <i class="fas fa-wifi" style="font-size: 50px; color: #1a2a6c; opacity: 0.6;"></i>
+          </div>
+        </div>
+
+        <!-- Card 3: Suporte Técnico -->
+        <div class="cv-card">
+          <h4><i class="fas fa-headset"></i> Suporte Técnico</h4>
+          <ul>
+            <li>Suporte remoto (AnyDesk, TeamViewer, VNC)</li>
+            <li>Formatação e instalação de sistemas</li>
+            <li>Instalação de pacotes Office e antivírus</li>
+            <li>Configuração de e-mails corporativos</li>
+            <li>Gestão de usuários e permissões</li>
+            <li>Treinamento de usuários</li>
+          </ul>
+          <div style="margin-top: 15px; text-align: center;">
+            <i class="fas fa-phone-alt" style="font-size: 50px; color: #1a2a6c; opacity: 0.6;"></i>
+          </div>
+        </div>
       </div>
 
-      <div class="cv-card">
-        <h4><i class="fas fa-network-wired"></i> Redes Sem Fio e Cabeadas (Corporativas/Residenciais)</h4>
-        <p style="font-size: 14px; margin-top: 10px; color: #555; text-align: left;">
-          Planejamento e instalação de infraestrutura de rede local. Configuração avançada de roteadores, switches, repetidores Wi-Fi e segmentação de redes para garantir máxima cobertura, velocidade de internet estável e total segurança contra intrusos.
-        </p>
-        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQ..." alt="Configuração de Redes">
-      </div>
+      <!-- Card 4 e 5 em uma nova linha -->
+      <div class="cv-cards-container" style="margin-top: 20px;">
+        <!-- Card 4: Segurança Digital -->
+        <div class="cv-card">
+          <h4><i class="fas fa-shield-alt"></i> Segurança Digital</h4>
+          <ul>
+            <li>Configuração de firewalls e antivírus</li>
+            <li>Monitoramento de redes (Zabbix, GLPI)</li>
+            <li>Gestão de segurança corporativa</li>
+            <li>Backup e recuperação de dados</li>
+            <li>Políticas de segurança</li>
+          </ul>
+          <div style="margin-top: 15px; text-align: center;">
+            <i class="fas fa-lock" style="font-size: 50px; color: #1a2a6c; opacity: 0.6;"></i>
+          </div>
+        </div>
 
-    </div>
+        <!-- Card 5: Servidores e Cloud -->
+        <div class="cv-card">
+          <h4><i class="fas fa-server"></i> Servidores e Cloud</h4>
+          <ul>
+            <li>Windows Server e Active Directory</li>
+            <li>Configuração de servidores</li>
+            <li>Ambientes em nuvem (AWS)</li>
+            <li>ERP corporativo (TOTVS-PROTHEUS)</li>
+            <li>Gestão de infraestrutura</li>
+          </ul>
+          <div style="margin-top: 15px; text-align: center;">
+            <i class="fas fa-cloud" style="font-size: 50px; color: #1a2a6c; opacity: 0.6;"></i>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <p>#tecnologia #computadores #internet #notebooks #informática</p>
+    <p style="font-size: 11px; opacity: 0.7; margin-top: 5px;">
+      &copy; <span id="ano"></span> Rodrigo - Soluções em Informática. Todos os direitos reservados.
+    </p>
   </footer>
+
+  <script>
+    // Ano automático no rodapé
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
 </body>
 
 </html>

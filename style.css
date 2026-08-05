@@ -12,52 +12,54 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', Arial, sans-serif; /* Fonte mais moderna e profissional */
+  font-family: 'Segoe UI', Arial, sans-serif;
   background-image: url('fundo.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: #333;
+  color: #0f172a;
   min-height: 100vh;
   line-height: 1.6;
 }
 
 /* ==========================================================================
-   2. CABEÇALHO E TÍTULO LUXUOSO (Dourado de Convite de Casamento)
+   2. CABEÇALHO
    ========================================================================== */
 header {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 25px 15px 15px;
+  padding: 20px 15px 15px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
 .logo {
-  width: 150px;
+  width: 180px;
   max-width: 100%;
   height: auto;
   border-radius: 12px;
-  margin: 0 auto 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
+  margin: 0 auto 5px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logo:hover {
   transform: scale(1.03);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
 }
 
-/* Título Cursivo Sofisticado em Ouro Nobre com Sombra de Fundo Reforçada */
 .titulo {
-  color: #D4AF37; /* Tom de Ouro de Alta Qualidade */
+  color: #D4AF37;
   font-family: 'Georgia', 'Brush Script MT', 'Lucida Handwriting', cursive;
   font-style: italic;
   font-size: 36px;
   font-weight: normal;
   margin-bottom: 20px;
-  
-  /* Contorno escuro em várias direções para criar uma sombra de fundo nítida */
   text-shadow: 
     2px 2px 3px rgba(0, 0, 0, 0.95),
     -1px -1px 2px rgba(0, 0, 0, 0.9),
@@ -67,42 +69,75 @@ header {
 }
 
 /* ==========================================================================
-   3. NAVEGAÇÃO / MENU
+   3. NAVEGAÇÃO / MENU - VERSÃO MELHORADA
    ========================================================================== */
 nav {
   display: inline-block;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px 24px;
+  background-color: rgba(15, 23, 42, 0.85);
+  padding: 8px 20px;
   border-radius: 25px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  margin: 0 auto;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 nav a {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
-  margin: 0 14px;
-  transition: color 0.3s ease;
+  font-size: 15px;
+  margin: 0 16px;
+  transition: all 0.3s ease;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
+  position: relative;
+  padding: 4px 0;
 }
 
 nav a:hover {
-  color: #25d366;
+  color: #10b981;
+}
+
+/* Efeito de underline animado */
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2.5px;
+  background: #10b981;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+nav a:hover::after {
+  width: 70%;
+}
+
+/* Link ativo (página atual) */
+nav a.active {
+  color: #ffffff;
+}
+
+nav a.active::after {
+  width: 70%;
 }
 
 /* ==========================================================================
-   4. CONTEÚDO PRINCIPAL (MAIN E SECÇÕES PROFISSIONAIS)
+   4. CONTEÚDO PRINCIPAL
    ========================================================================== */
 main {
   width: 100%;
   max-width: 850px;
   margin: 30px auto 50px;
-  background-color: rgba(255, 255, 255, 0.97); /* Fundo ligeiramente mais opaco para melhor leitura */
+  background-color: rgba(255, 255, 255, 0.97);
   padding: 35px;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
 }
 
 section {
@@ -112,19 +147,27 @@ section {
 h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #1a1a1a;
-  border-bottom: 3px solid #25d366;
-  padding-bottom: 8px;
+  color: #0f172a;
+  border-bottom: 3px solid #10b981;
+  padding-bottom: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 19px;
+  color: #1e293b;
+  font-weight: 600;
 }
 
 p {
   margin-bottom: 18px;
   text-align: justify;
-  color: #444;
+  color: #334155;
   font-size: 15.5px;
+  line-height: 1.7;
 }
 
 ul {
@@ -134,35 +177,41 @@ ul {
 
 ul li {
   margin-bottom: 10px;
+  color: #334155;
 }
 
-/* Imagens das páginas */
 .apresentacao img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 12px;
   display: block;
   margin: 20px auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
 .trabalhos img {
   max-width: 100%;
   height: auto;
-  border-radius: 6px;
+  border-radius: 8px;
   margin-top: 10px;
   display: inline-block;
 }
 
-/* Estilização da Secção "Sobre Mim" */
+.mim {
+  background: #f1f5f9;
+  padding: 22px 25px;
+  border-radius: 12px;
+  border-left: 4px solid #10b981;
+}
+
 .mim p {
   margin-bottom: 14px;
 }
 
 .mim a {
-  color: #0066cc;
+  color: #2563eb;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .mim a:hover {
@@ -170,17 +219,14 @@ ul li {
 }
 
 /* ==========================================================================
-   5. COMPONENTES DO TEU CURRÍCULO (FLEXBOX E CARDS ATIVADOS)
+   5. COMPETÊNCIAS TÉCNICAS
    ========================================================================== */
 .perfil-profissional h3 {
   margin: 30px 0 15px;
-  color: #222;
-  font-size: 19px;
-  border-left: 4px solid #0066cc;
-  padding-left: 10px;
+  border-left: 4px solid #1a2a6c;
+  padding-left: 12px;
 }
 
-/* Contentores em Colunas Alinhadas */
 .cv-cards-container {
   display: flex;
   gap: 20px;
@@ -189,22 +235,29 @@ ul li {
 
 .cv-card {
   flex: 1;
-  background-color: #f8f9fa;
-  padding: 20px;
-  border-radius: 10px;
-  border-top: 4px solid #25d366;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
-  transition: transform 0.2s ease;
+  background-color: #f8fafc;
+  padding: 22px 20px;
+  border-radius: 12px;
+  border-top: 4px solid #10b981;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
 }
 
 .cv-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 .cv-card h4 {
   font-size: 16px;
   margin-bottom: 12px;
-  color: #111;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.cv-card h4 i {
+  color: #10b981;
+  margin-right: 8px;
 }
 
 .cv-card ul {
@@ -218,108 +271,256 @@ ul li {
   margin-bottom: 8px;
   text-align: left;
   position: relative;
-  padding-left: 15px;
+  padding-left: 18px;
+  color: #475569;
 }
 
 .cv-card ul li::before {
-  content: "■";
-  color: #25d366;
-  font-size: 10px;
+  content: "▸";
+  color: #10b981;
+  font-size: 14px;
+  font-weight: bold;
   position: absolute;
   left: 0;
-  top: 1px;
+  top: 0;
 }
 
-/* Layout de Duas Colunas (Formação e Histórico) */
-.cv-duas-colunas {
-  display: flex;
+/* ==========================================================================
+   6. FORMAÇÃO E CERTIFICADOS LADO A LADO
+   ========================================================================== */
+.formacao-certificados-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
-  margin-bottom: 30px;
+  margin: 15px 0 30px;
 }
 
-.cv-duas-colunas .coluna {
-  flex: 1;
-}
-
-.lista-cv {
-  list-style: none;
+/* Coluna Esquerda - Formação */
+.formacao-coluna h3 {
+  margin-top: 0 !important;
+  border-bottom: 2px solid #10b981;
+  padding-bottom: 10px;
+  border-left: none;
   padding-left: 0;
 }
 
-.lista-cv li {
-  margin-bottom: 14px;
-  font-size: 14.5px;
+.formacao-lista {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.formacao-lista::-webkit-scrollbar {
+  width: 6px;
+}
+
+.formacao-lista::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.formacao-lista::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 10px;
+}
+
+.formacao-item-simples {
+  background: #f8fafc;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border-left: 4px solid #10b981;
+  transition: all 0.3s ease;
+}
+
+.formacao-item-simples:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.formacao-item-simples h4 {
+  color: #1a2a6c;
+  font-size: 14px;
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.formacao-instituicao-simples {
+  color: #475569;
+  font-size: 13px;
+  margin-bottom: 1px;
+}
+
+.formacao-periodo {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.formacao-comp {
+  color: #64748b;
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* Coluna Direita - Certificados */
+.certificados-coluna h3 {
+  margin-top: 0 !important;
+  border-bottom: 2px solid #f59e0b;
+  padding-bottom: 10px;
+  border-left: none;
+  padding-left: 0;
+}
+
+.certificados-lista {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
+  margin-top: 15px;
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 10px;
 }
 
-.lista-cv li i {
-  color: #0066cc;
-  margin-top: 4px;
-  font-size: 15px;
+.certificados-lista::-webkit-scrollbar {
+  width: 6px;
 }
 
-/* Links em Formato Pílula Moderna para os Portfólios */
+.certificados-lista::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.certificados-lista::-webkit-scrollbar-thumb {
+  background: #f59e0b;
+  border-radius: 10px;
+}
+
+.certificado-item-simples {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8fafc;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border-left: 4px solid #f59e0b;
+  transition: all 0.3s ease;
+}
+
+.certificado-item-simples:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.certificado-icone {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  font-size: 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.certificado-conteudo {
+  flex: 1;
+}
+
+.certificado-conteudo h4 {
+  color: #1a2a6c;
+  font-size: 13px;
+  margin-bottom: 1px;
+  font-weight: 600;
+}
+
+.certificado-emissor-simples {
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.certificado-data-simples {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* ==========================================================================
+   7. PORTFÓLIOS E REDES
+   ========================================================================== */
 .links-portfolio {
   display: flex;
   gap: 15px;
   margin: 20px 0 35px;
+  flex-wrap: wrap;
 }
 
 .link-item {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #f1f3f5;
-  padding: 10px 20px;
-  border-radius: 30px;
+  background-color: #f1f5f9;
+  padding: 10px 22px;
+  border-radius: 50px;
   text-decoration: none;
-  color: #495057;
+  color: #475569;
   font-weight: 600;
   font-size: 14px;
-  border: 1px solid #dee2e6;
-  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
 }
 
 .link-item:hover {
-  background-color: #0066cc;
+  background-color: #1a2a6c;
   color: #fff;
-  border-color: #0066cc;
+  border-color: #1a2a6c;
   transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(26,42,108,0.2);
 }
 
 .link-item i {
   font-size: 16px;
 }
 
-/* Botão de Orçamento Centralizado */
+/* ==========================================================================
+   8. BOTÃO WHATSAPP
+   ========================================================================== */
 .btn-centralizado {
   text-align: center;
   margin-top: 30px;
 }
 
 .whatsapp-btn {
-  display: inline-block;
-  background-color: #25d366;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #10b981, #059669);
   color: #fff;
-  padding: 14px 30px;
+  padding: 16px 38px;
   font-size: 17px;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+  border-radius: 50px;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 25px rgba(16, 185, 129, 0.35);
 }
 
 .whatsapp-btn:hover {
-  background-color: #1ed760;
-  transform: translateY(-2px);
-  box-shadow: 0 7px 20px rgba(37, 211, 102, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(16, 185, 129, 0.45);
+}
+
+.whatsapp-btn i {
+  font-size: 22px;
 }
 
 /* ==========================================================================
-   6. PÁGINA DE CONTATO
+   9. PÁGINA DE CONTATO
    ========================================================================== */
 .contato form {
   display: flex;
@@ -327,43 +528,48 @@ ul li {
 }
 
 .contato label {
-  font-weight: bold;
+  font-weight: 600;
   margin-top: 15px;
   margin-bottom: 5px;
-  color: #444;
+  color: #1e293b;
 }
 
 .contato input,
 .contato textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
   font-size: 15px;
   width: 100%;
+  transition: all 0.3s ease;
+  background: white;
+  font-family: inherit;
 }
 
 .contato input:focus,
 .contato textarea:focus {
   outline: none;
-  border-color: #25d366;
-  box-shadow: 0 0 5px rgba(37, 211, 102, 0.5);
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
 }
 
 .contato button {
-  background-color: #25d366;
+  background: linear-gradient(135deg, #10b981, #059669);
   color: #fff;
   padding: 14px;
   font-size: 17px;
-  font-weight: bold;
+  font-weight: 600;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   margin-top: 20px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
 }
 
 .contato button:hover {
-  background-color: #1ed760;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
 }
 
 .redes-sociais {
@@ -379,44 +585,54 @@ ul li {
   align-items: center;
   gap: 8px;
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 6px;
+  padding: 12px 25px;
+  border-radius: 30px;
   text-decoration: none;
-  font-weight: bold;
-  transition: opacity 0.3s ease;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.facebook-btn { background-color: #3b5998; }
-.instagram-btn { background-color: #e1306c; }
+.redes-sociais a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.facebook-btn { 
+  background: linear-gradient(135deg, #3b5998, #2d4373);
+}
+
+.instagram-btn { 
+  background: linear-gradient(135deg, #e1306c, #c13584);
+}
 
 /* ==========================================================================
-   7. RODAPÉ PROFISSIONAL COM BARRRA DE FUNDO DEDICADA
+   10. RODAPÉ
    ========================================================================== */
 footer {
-  background-color: rgba(0, 0, 0, 0.75); /* Barra escura sólida e moderna */
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   text-align: center;
-  padding: 20px 15px;
+  padding: 25px 20px;
   color: #ffffff;
   font-size: 14px;
   width: 100%;
   margin-top: 50px;
-  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
-  clear: both;
+  border-top: 3px solid rgba(16, 185, 129, 0.15);
 }
 
 footer p {
   text-align: center;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.75);
   margin: 0;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.5px;
+  font-size: 13px;
 }
 
 /* ==========================================================================
-   8. RESPONSIVIDADE (MOBILE TOTALMENTE CORRIGIDO)
+   11. RESPONSIVIDADE
    ========================================================================== */
 @media (max-width: 768px) {
-  .cv-cards-container,
-  .cv-duas-colunas {
+  .cv-cards-container {
     flex-direction: column;
     gap: 20px;
   }
@@ -430,6 +646,33 @@ footer p {
     width: 100%;
     justify-content: center;
   }
+  
+  .formacao-certificados-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .formacao-lista,
+  .certificados-lista {
+    max-height: 400px;
+  }
+
+  nav {
+    padding: 6px 14px;
+  }
+  
+  nav a {
+    font-size: 13px;
+    margin: 0 10px;
+  }
+  
+  .apresentacao h2 {
+    font-size: 2rem;
+  }
+  
+  .apresentacao img {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -442,7 +685,7 @@ footer p {
   }
 
   .logo {
-    width: 120px;
+    width: 130px;
   }
 
   .titulo {
@@ -454,10 +697,11 @@ footer p {
     flex-direction: column;
     width: 100%;
     max-width: 280px;
-    margin: 15px auto 0;
+    margin: 10px auto 0;
     gap: 5px;
     padding: 10px;
     border-radius: 12px;
+    min-width: auto;
   }
 
   nav a {
@@ -467,6 +711,15 @@ footer p {
     text-align: center;
     margin: 0;
   }
+  
+  nav a::after {
+    display: none;
+  }
+  
+  nav a.active {
+    background: rgba(16, 185, 129, 0.15);
+    border-radius: 8px;
+  }
 
   main {
     width: calc(100% - 20px);
@@ -475,6 +728,26 @@ footer p {
   }
 
   .redes-sociais a {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .formacao-lista,
+  .certificados-lista {
+    max-height: 300px;
+  }
+  
+  .apresentacao h2 {
+    font-size: 1.6rem;
+  }
+  
+  .apresentacao p {
+    font-size: 1rem;
+  }
+  
+  .whatsapp-btn {
+    padding: 14px 24px;
+    font-size: 15px;
     width: 100%;
     justify-content: center;
   }

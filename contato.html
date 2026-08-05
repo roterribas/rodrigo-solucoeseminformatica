@@ -1,70 +1,192 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rodrigo - Soluções em Informática</title>
+  
+  <!-- Meta tags para SEO -->
+  <meta name="description" content="Entre em contato com Rodrigo - Soluções em Informática. Formulário para orçamento, dúvidas ou agendamento de serviços em Carapicuíba - SP.">
+  <meta name="keywords" content="contato, informática, orçamento, suporte técnico, Carapicuíba, WhatsApp, e-mail">
+  <meta name="author" content="Rodrigo Terribas Saraiva">
+  <meta name="robots" content="index, follow">
+
+  <!-- Meta tags para compartilhamento em redes sociais (Open Graph) -->
+  <meta property="og:title" content="Contato - Rodrigo Soluções em Informática">
+  <meta property="og:description" content="Entre em contato para solicitar um orçamento, tirar dúvidas ou agendar um serviço.">
+  <meta property="og:image" content="https://seusite.com/logo.jpeg">
+  <meta property="og:url" content="https://seusite.com/contato.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Rodrigo - Soluções em Informática">
+
+  <!-- Meta tags para Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contato - Rodrigo Soluções em Informática">
+  <meta name="twitter:description" content="Entre em contato para solicitar um orçamento, tirar dúvidas ou agendar um serviço.">
+
+  <title>Contato - Rodrigo Soluções em Informática</title>
   
   <link rel="icon" type="image/jpeg" href="logo.jpeg">
   
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
   <header>
     <img src="logo.jpeg" alt="Logo Rodrigo" class="logo">
-    <h1 class="titulo">Rodrigo - Soluções em Informática 🖥️</h1>
     <nav>
       <a href="index.html">Início</a>
       <a href="trabalhos.html">Trabalhos</a>
-      <a href="contato.html">Contato</a>
+      <a href="contato.html" class="active">Contato</a>
     </nav>
   </header>
 
-  <main class="contato">
-    <h2><i class="fab fa-whatsapp"></i> Fale com a gente</h2>
-    <p>Envie sua mensagem direto para o WhatsApp preenchendo os campos abaixo:</p>
+  <main>
+    <section class="perfil-profissional">
+      <h2><i class="fas fa-envelope"></i> Fale comigo</h2>
+      <p style="text-align: center; font-size: 1.1rem; margin-bottom: 30px;">
+        Preencha o formulário abaixo e entrarei em contato o mais rápido possível!
+      </p>
 
-    <form id="form-contato">
-      <label for="nome"><i class="fas fa-user"></i> Nome:</label>
-      <input type="text" id="nome" name="nome" required>
+      <!-- Formulário de Contato -->
+      <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; border-left: 4px solid #10b981; max-width: 600px; margin: 0 auto;">
+        <h3 style="margin-top: 0; border-left: none; padding-left: 0; text-align: center;">
+          <i class="fas fa-paper-plane" style="color: #10b981;"></i> 
+          Envie sua mensagem
+        </h3>
+        <p style="text-align: center; margin-bottom: 25px; color: #6c757d; font-size: 14px;">
+          Responderei por e-mail ou WhatsApp
+        </p>
 
-      <label for="email"><i class="fas fa-envelope"></i> E-mail:</label>
-      <input type="email" id="email" name="email" required>
+        <form id="form-contato">
+          <div style="margin-bottom: 15px;">
+            <label for="nome" style="display: block; font-weight: bold; margin-bottom: 5px; color: #1e293b;">
+              <i class="fas fa-user" style="color: #10b981;"></i> Nome:
+            </label>
+            <input type="text" id="nome" name="nome" required 
+                   placeholder="Digite seu nome completo"
+                   style="width: 100%; padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 15px; transition: all 0.3s ease; background: white;">
+          </div>
 
-      <label for="mensagem"><i class="fas fa-comment-dots"></i> Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+          <div style="margin-bottom: 15px;">
+            <label for="email" style="display: block; font-weight: bold; margin-bottom: 5px; color: #1e293b;">
+              <i class="fas fa-envelope" style="color: #10b981;"></i> E-mail:
+            </label>
+            <input type="email" id="email" name="email" required 
+                   placeholder="seu@email.com"
+                   style="width: 100%; padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 15px; transition: all 0.3s ease; background: white;">
+          </div>
 
-      <button type="submit"><i class="fab fa-whatsapp"></i> Enviar via WhatsApp</button>
-    </form>
+          <div style="margin-bottom: 20px;">
+            <label for="telefone" style="display: block; font-weight: bold; margin-bottom: 5px; color: #1e293b;">
+              <i class="fas fa-phone" style="color: #10b981;"></i> Telefone (opcional):
+            </label>
+            <input type="tel" id="telefone" name="telefone" 
+                   placeholder="(11) 99999-9999"
+                   style="width: 100%; padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 15px; transition: all 0.3s ease; background: white;">
+          </div>
 
-    <div class="redes-sociais">
-      <a href="https://wa.me/5511976817558" target="_blank" rel="noopener noreferrer" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      <a href="https://facebook.com/rodrigosolucoeseminformatica" target="_blank" rel="noopener noreferrer" class="facebook-btn"><i class="fab fa-facebook-f"></i> Facebook</a>
-      <a href="https://instagram.com/rodrigosolucoeseminformatica" target="_blank" rel="noopener noreferrer" class="instagram-btn"><i class="fab fa-instagram"></i> Instagram</a>
-    </div>
+          <div style="margin-bottom: 20px;">
+            <label for="mensagem" style="display: block; font-weight: bold; margin-bottom: 5px; color: #1e293b;">
+              <i class="fas fa-comment-dots" style="color: #10b981;"></i> Mensagem:
+            </label>
+            <textarea id="mensagem" name="mensagem" rows="5" required 
+                      placeholder="Descreva o que você precisa..."
+                      style="width: 100%; padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 15px; resize: vertical; font-family: inherit; transition: all 0.3s ease; background: white;"></textarea>
+          </div>
+
+          <button type="submit" style="width: 100%; background: linear-gradient(135deg, #10b981, #059669); color: #fff; padding: 14px; font-size: 18px; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);">
+            <i class="fab fa-whatsapp"></i> Enviar via WhatsApp
+          </button>
+        </form>
+        
+        <p style="text-align: center; margin-top: 15px; font-size: 13px; color: #6c757d;">
+          <i class="fas fa-lock" style="color: #10b981;"></i> Seus dados estão seguros
+        </p>
+      </div>
+
+      <!-- Redes Sociais -->
+      <div style="margin-top: 40px;">
+        <h3 style="border-left: none; padding-left: 0; text-align: center;">
+          <i class="fas fa-share-alt"></i> Redes Sociais
+        </h3>
+        <div class="redes-sociais" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
+          <a href="https://wa.me/5511976817558" target="_blank" rel="noopener noreferrer" 
+             style="display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #25d366, #1da851); color: #fff; padding: 12px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); font-size: 14px;">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="mailto:rodrigo.saraiva01@etec.sp.gov.br" target="_blank" rel="noopener noreferrer" 
+             style="display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #0066cc, #004d99); color: #fff; padding: 12px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3); font-size: 13px;">
+            <i class="fas fa-envelope"></i> rodrigo.saraiva01@etec.sp.gov.br
+          </a>
+          <a href="mailto:rodrigosolucoeseminformatica@gmail.com" target="_blank" rel="noopener noreferrer" 
+             style="display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #ea4335, #d33426); color: #fff; padding: 12px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(234, 67, 53, 0.3); font-size: 13px;">
+            <i class="fas fa-envelope"></i> rodrigosolucoeseminformatica@gmail.com
+          </a>
+          <a href="https://facebook.com/rodrigosolucoeseminformatica" target="_blank" rel="noopener noreferrer" 
+             style="display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #3b5998, #2d4373); color: #fff; padding: 12px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(59, 89, 152, 0.3); font-size: 14px;">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+          <a href="https://instagram.com/rodrigosolucoeseminformatica" target="_blank" rel="noopener noreferrer" 
+             style="display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #e1306c, #c13584); color: #fff; padding: 12px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(225, 48, 108, 0.3); font-size: 14px;">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <p>#tecnologia #computadores #internet #notebooks #informática</p>
+    <p style="font-size: 11px; opacity: 0.7; margin-top: 5px;">
+      &copy; <span id="ano"></span> Rodrigo - Soluções em Informática. Todos os direitos reservados.
+    </p>
   </footer>
 
   <script>
+    // Ano automático no rodapé
+    document.getElementById('ano').textContent = new Date().getFullYear();
+
     document.getElementById('form-contato').addEventListener('submit', function(e) {
       e.preventDefault();
       
-      const nome = encodeURIComponent(document.getElementById('nome').value);
-      const email = encodeURIComponent(document.getElementById('email').value);
-      const mensagem = encodeURIComponent(document.getElementById('mensagem').value);
+      const nome = encodeURIComponent(document.getElementById('nome').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const telefone = encodeURIComponent(document.getElementById('telefone').value.trim());
+      const mensagem = encodeURIComponent(document.getElementById('mensagem').value.trim());
+      
+      if (!nome || !email || !mensagem) {
+        alert('Por favor, preencha os campos Nome, E-mail e Mensagem.');
+        return;
+      }
       
       const numeroWhats = "5511976817558";
+      let textoMensagem = `Olá, meu nome é ${nome}. Meu e-mail é ${email}.`;
       
-      const textoMensagem = `Olá, meu nome é ${nome}. Meu e-mail é ${email}.%0A%0AMensagem:%0A${mensagem}`;
+      if (telefone) {
+        textoMensagem += ` Meu telefone é ${telefone}.`;
+      }
+      
+      textoMensagem += `%0A%0AMensagem:%0A${mensagem}`;
       
       const url = `https://wa.me/${numeroWhats}?text=${textoMensagem}`;
       
       window.open(url, '_blank');
     });
+
+    // Efeito de foco nos inputs
+    document.querySelectorAll('input, textarea').forEach(el => {
+      el.addEventListener('focus', function() {
+        this.style.borderColor = '#10b981';
+        this.style.boxShadow = '0 0 0 3px rgba(16, 185, 129, 0.1)';
+      });
+      el.addEventListener('blur', function() {
+        this.style.borderColor = '#e2e8f0';
+        this.style.boxShadow = 'none';
+      });
+    });
   </script>
 </body>
+
 </html>
