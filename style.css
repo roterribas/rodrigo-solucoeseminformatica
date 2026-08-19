@@ -28,7 +28,7 @@ body {
    ========================================================================== */
 header {
   width: 100%;
-  max-width: 1100px;
+  max-width: 980px; /* Aumentei para combinar com o main */
   margin: 0 auto;
   padding: 20px 15px 15px;
   text-align: center;
@@ -129,11 +129,11 @@ nav a.active::after {
 }
 
 /* ==========================================================================
-   4. CONTEÚDO PRINCIPAL
+   4. CONTEÚDO PRINCIPAL (AUMENTEI A LARGURA DO SITE INTEIRO)
    ========================================================================== */
 main {
   width: 100%;
-  max-width: 850px;
+  max-width: 980px; /* Aumentei de 850px para 980px */
   margin: 30px auto 50px;
   background-color: rgba(255, 255, 255, 0.97);
   padding: 35px;
@@ -181,9 +181,12 @@ ul li {
   color: #334155;
 }
 
+/* ==========================================================================
+   5. APRESENTAÇÃO (CAIXA CINZA DO MEIO - AUMENTADA)
+   ========================================================================== */
 .apresentacao {
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 40px; /* Mais espaço interno */
   background: linear-gradient(135deg, #f8fafc, #e2e8f0);
   border-radius: 12px;
   margin-bottom: 30px;
@@ -191,24 +194,20 @@ ul li {
 }
 
 .apresentacao h2 {
-  font-size: 2.5rem;
+  font-size: 3.2rem; /* Título bem maior */
   color: #0f172a;
   border-bottom: none;
   justify-content: center;
+  margin-bottom: 15px;
 }
 
 .apresentacao p {
-  font-size: 1.2rem;
+  font-size: 1.4rem; /* Texto de descrição maior */
   color: #475569;
-  max-width: 700px;
-  margin: 0 auto 20px;
+  max-width: 850px;
+  margin: 0 auto 25px;
   text-align: center;
-}
-
-.apresentacao img {
-  max-width: 80%;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  line-height: 1.6;
 }
 
 .trabalhos img {
@@ -242,7 +241,7 @@ ul li {
 }
 
 /* ==========================================================================
-   5. COMPETÊNCIAS TÉCNICAS - CARDS DE SERVIÇOS
+   6. COMPETÊNCIAS TÉCNICAS - CARDS DE SERVIÇOS
    ========================================================================== */
 .perfil-profissional h3 {
   margin: 30px 0 15px;
@@ -332,7 +331,7 @@ ul li {
 }
 
 /* ==========================================================================
-   6. ÍCONES DE COMPETÊNCIAS - ÍCONE + NOME VISÍVEL
+   7. ÍCONES DE COMPETÊNCIAS - ÍCONE + NOME VISÍVEL
    ========================================================================== */
 .card-competencias-icones {
   display: flex;
@@ -404,7 +403,7 @@ ul li {
 }
 
 /* ==========================================================================
-   7. FORMAÇÃO E CERTIFICADOS LADO A LADO
+   8. FORMAÇÃO E CERTIFICADOS LADO A LADO
    ========================================================================== */
 .formacao-certificados-wrapper {
   display: grid;
@@ -604,7 +603,7 @@ ul li {
 }
 
 /* ==========================================================================
-   8. PORTFÓLIOS E REDES
+   9. PORTFÓLIOS E REDES
    ========================================================================== */
 .links-portfolio {
   display: flex;
@@ -647,7 +646,7 @@ ul li {
 }
 
 /* ==========================================================================
-   9. BOTÃO WHATSAPP
+   10. BOTÃO WHATSAPP
    ========================================================================== */
 .btn-centralizado {
   text-align: center;
@@ -682,21 +681,21 @@ ul li {
 }
 
 /* ==========================================================================
-   10. GRID DE ÍCONES DA APRESENTAÇÃO (Substituindo a imagem)
+   11. GRID DE ÍCONES DA APRESENTAÇÃO (Aumentei os cartões e o espaço)
    ========================================================================== */
 .grid-icones-servicos {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 35px; /* Aumentei o espaço entre os cartões */
   margin: 30px 0 10px;
   flex-wrap: wrap;
 }
 
 .icone-card {
   background: #ffffff;
-  padding: 25px 20px;
+  padding: 35px 30px; /* Mais espaço interno */
   border-radius: 16px;
-  width: 200px;
+  width: 250px; /* Aumentei a largura para preencher o espaço novo */
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border: 1px solid #e2e8f0;
@@ -710,17 +709,22 @@ ul li {
 }
 
 .icone-wrapper {
-  width: 60px;
-  height: 60px;
+  width: 75px; /* Ícone maior */
+  height: 75px;
   background: #f1f5f9;
   border-radius: 50%;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 15px;
-  font-size: 28px;
+  font-size: 34px; /* Ícone visualmente maior */
   color: #0f172a;
   transition: all 0.3s ease;
+}
+
+.icone-wrapper i {
+  display: block;
+  line-height: 1;
 }
 
 .icone-card:hover .icone-wrapper {
@@ -730,22 +734,65 @@ ul li {
 }
 
 .icone-card h4 {
-  font-size: 16px;
+  font-size: 20px; /* Título dos cartões maior */
   color: #0f172a;
-  margin-bottom: 8px;
+  margin-bottom: 0;
   font-weight: 600;
 }
 
-.icone-card p {
-  font-size: 13px;
-  color: #64748b;
-  margin: 0;
-  line-height: 1.5;
+/* ==========================================================================
+   12. ÍCONE WHATSAPP FLUTUANTE (SEMPRE VISÍVEL)
+   ========================================================================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   text-align: center;
+  font-size: 32px;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: pulseWhatsApp 2s infinite;
+}
+
+@keyframes pulseWhatsApp {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+@media (max-width: 480px) {
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    font-size: 28px;
+    bottom: 15px;
+    right: 15px;
+  }
 }
 
 /* ==========================================================================
-   11. PÁGINA DE CONTATO
+   13. PÁGINA DE CONTATO
    ========================================================================== */
 .contato form {
   display: flex;
@@ -832,7 +879,7 @@ ul li {
 }
 
 /* ==========================================================================
-   12. RODAPÉ
+   14. RODAPÉ
    ========================================================================== */
 footer {
   background: linear-gradient(135deg, #0f172a, #1e293b);
@@ -854,10 +901,9 @@ footer p {
 }
 
 /* ==========================================================================
-   13. ANIMAÇÕES SUAVES
+   15. ANIMAÇÕES SUAVES
    ========================================================================== */
 
-/* Animações de entrada */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -900,7 +946,6 @@ footer p {
   }
 }
 
-/* Prevenir animações em dispositivos que preferem movimento reduzido */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -913,7 +958,7 @@ footer p {
 }
 
 /* ==========================================================================
-   14. RESPONSIVIDADE
+   16. RESPONSIVIDADE
    ========================================================================== */
 @media (max-width: 768px) {
   .cv-cards-container {
@@ -953,10 +998,6 @@ footer p {
   .apresentacao h2 {
     font-size: 2rem;
   }
-  
-  .apresentacao img {
-    max-width: 100%;
-  }
 
   .tooltip {
     font-size: 10px;
@@ -975,10 +1016,10 @@ footer p {
     font-size: 9px;
   }
   
-  /* Ajuste para telas pequenas (celulares) do Grid de ícones */
   .grid-icones-servicos {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
   }
   .icone-card {
     width: 100%;
