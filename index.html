@@ -34,7 +34,10 @@
 
 <body>
   <header>
-    <img src="logo.jpeg" alt="Logo Rodrigo" class="logo">
+    <div class="header-content">
+      <img src="logo.jpeg" alt="Logo Rodrigo" class="logo">
+      <p class="slogan">Transformando tecnologia em soluções desde 2015</p>
+    </div>
     <nav>
       <a href="index.html" class="active">Início</a>
       <a href="trabalhos.html">Trabalhos</a>
@@ -45,39 +48,55 @@
   <main>
     <section class="apresentacao">
       <h2>Bem-vindo!</h2>
-      <p style="max-width: 700px; margin: 0 auto 20px;">
-        Oferecemos soluções em informática com atendimento personalizado e suporte remoto.
+      <p style="max-width: 700px; margin: 0 auto 20px; font-size: 1.15rem; color: #334155;">
+        Soluções em informática que realmente funcionam. Atendimento humanizado, 
+        suporte ágil e resultados que você vê na prática.
       </p>
       
-      <!-- GRID DE ÍCONES (Com ajuste de tamanho) -->
+      <!-- GRID DE ÍCONES COM DIFERENCIAIS -->
       <div class="grid-icones-servicos">
-        <!-- Ícone 1 -->
+        <!-- Card 1 -->
         <div class="icone-card">
           <div class="icone-wrapper">
             <i class="fa-solid fa-laptop-medical"></i>
           </div>
           <h4>Manutenção & Reparos</h4>
+          <span class="icone-diferencial">Profissional certificado</span>
         </div>
 
-        <!-- Ícone 2 -->
+        <!-- Card 2 -->
         <div class="icone-card">
           <div class="icone-wrapper">
             <i class="fa-solid fa-gears"></i>
           </div>
           <h4>Otimização & Configuração</h4>
+          <span class="icone-diferencial">Presencial e remoto</span>
         </div>
 
-        <!-- Ícone 3 -->
+        <!-- Card 3 -->
         <div class="icone-card">
           <div class="icone-wrapper">
             <i class="fa-solid fa-wifi"></i>
           </div>
           <h4>Redes & Conectividade</h4>
+          <span class="icone-diferencial">Orçamento sem compromisso</span>
         </div>
       </div>
 
+      <!-- Selo de Confiança -->
+      <div class="selo-confianca">
+        <i class="fas fa-check-circle"></i>
+        <span>Atendimento 100% personalizado</span>
+        <span class="separador">|</span>
+        <i class="fas fa-shield-alt"></i>
+        <span>Suporte garantido</span>
+        <span class="separador">|</span>
+        <i class="fas fa-headset"></i>
+        <span>Suporte remoto disponível</span>
+      </div>
+
       <!-- Badges de serviços -->
-      <div style="display: flex; justify-content: center; gap: 15px; margin-top: 30px; flex-wrap: wrap;">
+      <div style="display: flex; justify-content: center; gap: 15px; margin-top: 20px; flex-wrap: wrap;">
         <span style="font-size: 13px; color: #475569; background: #f1f5f9; padding: 6px 16px; border-radius: 20px; border: 1px solid #e2e8f0;">
           <i class="fas fa-check-circle" style="color: #10b981;"></i> Suporte especializado
         </span>
@@ -528,7 +547,20 @@
   </a>
 
   <script>
-    document.getElementById('ano').textContent = new Date().getFullYear();
+    // Ano automático com animação
+    document.addEventListener('DOMContentLoaded', function() {
+      const anoElement = document.getElementById('ano');
+      const anoAtual = new Date().getFullYear();
+      
+      // Animação de fade-in
+      anoElement.style.opacity = '0';
+      anoElement.textContent = anoAtual;
+      
+      setTimeout(function() {
+        anoElement.style.transition = 'opacity 0.5s ease';
+        anoElement.style.opacity = '1';
+      }, 300);
+    });
   </script>
 </body>
 

@@ -24,7 +24,29 @@ body {
 }
 
 /* ==========================================================================
-   2. CABEÇALHO
+   SCROLLBAR PERSONALIZADA
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+/* ==========================================================================
+   2. CABEÇALHO - LOGO ALINHADO AO MENU
    ========================================================================== */
 header {
   width: 100%;
@@ -38,8 +60,15 @@ header {
   gap: 8px;
 }
 
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
 .logo {
-  width: 180px;
+  width: 320px;
   max-width: 100%;
   height: auto;
   border-radius: 12px;
@@ -52,6 +81,19 @@ header {
 .logo:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+/* SLOGAN - VERDE SÓLIDO (IDENTIDADE DO SITE) */
+.slogan {
+  color: #10b981;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
+  width: 100%;
+  max-width: 320px;
 }
 
 .titulo {
@@ -70,7 +112,7 @@ header {
 }
 
 /* ==========================================================================
-   3. NAVEGAÇÃO / MENU - VERSÃO PROFISSIONAL
+   3. NAVEGAÇÃO / MENU
    ========================================================================== */
 nav {
   display: inline-block;
@@ -101,7 +143,6 @@ nav a:hover {
   color: #10b981;
 }
 
-/* Efeito de underline animado */
 nav a::after {
   content: '';
   position: absolute;
@@ -119,7 +160,6 @@ nav a:hover::after {
   width: 70%;
 }
 
-/* Link ativo (página atual) */
 nav a.active {
   color: #ffffff;
 }
@@ -129,16 +169,19 @@ nav a.active::after {
 }
 
 /* ==========================================================================
-   4. CONTEÚDO PRINCIPAL
+   4. CONTEÚDO PRINCIPAL - COM GLASSMORPHISM
    ========================================================================== */
 main {
   width: 100%;
   max-width: 850px;
   margin: 30px auto 50px;
-  background-color: rgba(255, 255, 255, 0.97);
-  padding: 35px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  padding: 35px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
 }
 
 section {
@@ -187,10 +230,12 @@ ul li {
 .apresentacao {
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.8), rgba(226, 232, 240, 0.8));
   border-radius: 12px;
   margin-bottom: 30px;
   animation: fadeIn 0.8s ease forwards;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .apresentacao h2 {
@@ -209,7 +254,7 @@ ul li {
 }
 
 /* ==========================================================================
-   6. GRID DE ÍCONES DE SERVIÇOS
+   6. GRID DE ÍCONES DE SERVIÇOS COM DIFERENCIAIS
    ========================================================================== */
 .grid-icones-servicos {
   display: flex;
@@ -223,14 +268,16 @@ ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 20px 30px;
-  background: white;
+  gap: 8px;
+  padding: 20px 25px;
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 16px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.06);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid #e2e8f0;
-  min-width: 140px;
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  min-width: 150px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .icone-card:hover {
@@ -264,15 +311,59 @@ ul li {
   margin: 0;
 }
 
+.icone-diferencial {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+  margin-top: 4px;
+  text-align: center;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 8px;
+  width: 100%;
+}
+
 /* ==========================================================================
-   7. SOBRE MIM
+   7. SELO DE CONFIANÇA
+   ========================================================================== */
+.selo-confianca {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 24px;
+  background: rgba(241, 245, 249, 0.8);
+  border-radius: 50px;
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  margin: 20px auto 10px;
+  font-size: 13px;
+  color: #334155;
+  font-weight: 500;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.selo-confianca i {
+  font-size: 16px;
+  color: #10b981;
+}
+
+.selo-confianca .separador {
+  color: #cbd5e1;
+}
+
+/* ==========================================================================
+   8. SOBRE MIM
    ========================================================================== */
 .mim {
-  background: #f1f5f9;
+  background: rgba(241, 245, 249, 0.8);
   padding: 22px 25px;
   border-radius: 12px;
   border-left: 4px solid #10b981;
   animation: slideInLeft 0.6s ease forwards;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .mim p {
@@ -290,7 +381,7 @@ ul li {
 }
 
 /* ==========================================================================
-   8. COMPETÊNCIAS TÉCNICAS - CARDS DE SERVIÇOS
+   9. COMPETÊNCIAS TÉCNICAS - COM EFEITO DE BRILHO
    ========================================================================== */
 .perfil-profissional h3 {
   margin: 30px 0 15px;
@@ -315,6 +406,30 @@ ul li {
   animation: fadeInUp 0.6s ease forwards;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
               box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito de brilho nos cards */
+.cv-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(16, 185, 129, 0.03) 50%,
+    transparent 70%
+  );
+  transition: all 0.6s ease;
+  pointer-events: none;
+}
+
+.cv-card:hover::before {
+  transform: translateX(100%) translateY(100%);
 }
 
 .cv-card:nth-child(1) { animation-delay: 0.1s; }
@@ -366,7 +481,7 @@ ul li {
 }
 
 /* ==========================================================================
-   9. FORMAÇÃO E CERTIFICADOS LADO A LADO
+   10. FORMAÇÃO E CERTIFICADOS
    ========================================================================== */
 .formacao-certificados-wrapper {
   display: grid;
@@ -375,7 +490,6 @@ ul li {
   margin: 15px 0 30px;
 }
 
-/* Coluna Esquerda - Formação */
 .formacao-coluna h3 {
   margin-top: 0 !important;
   border-bottom: 2px solid #10b981;
@@ -459,7 +573,6 @@ ul li {
   margin-top: 2px;
 }
 
-/* Coluna Direita - Certificados */
 .certificados-coluna h3 {
   margin-top: 0 !important;
   border-bottom: 2px solid #f59e0b;
@@ -555,9 +668,6 @@ ul li {
   font-size: 11px;
 }
 
-/* ==========================================================================
-   LINKS DOS CERTIFICADOS
-   ========================================================================== */
 .certificado-link {
   display: inline-block;
   margin-top: 4px;
@@ -579,7 +689,7 @@ ul li {
 }
 
 /* ==========================================================================
-   10. PORTFÓLIOS E REDES
+   11. PORTFÓLIOS E REDES
    ========================================================================== */
 .links-portfolio {
   display: flex;
@@ -622,7 +732,7 @@ ul li {
 }
 
 /* ==========================================================================
-   11. BOTÃO WHATSAPP (GRANDE - APENAS INDEX)
+   12. BOTÕES WHATSAPP
    ========================================================================== */
 .btn-centralizado {
   text-align: center;
@@ -656,9 +766,6 @@ ul li {
   font-size: 22px;
 }
 
-/* ==========================================================================
-   12. ÍCONE FLUTUANTE WHATSAPP (TODAS AS PÁGINAS)
-   ========================================================================== */
 .whatsapp-float {
   position: fixed;
   bottom: 30px;
@@ -816,10 +923,8 @@ footer p {
 }
 
 /* ==========================================================================
-   15. ANIMAÇÕES SUAVES
+   15. ANIMAÇÕES
    ========================================================================== */
-
-/* Animações de entrada */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -873,7 +978,6 @@ footer p {
   }
 }
 
-/* Prevenir animações em dispositivos que preferem movimento reduzido */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -949,6 +1053,16 @@ footer p {
     bottom: 20px;
     right: 20px;
   }
+
+  .logo {
+    width: 280px;
+  }
+
+  .slogan {
+    font-size: 14px;
+    letter-spacing: 2px;
+    max-width: 280px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -961,7 +1075,13 @@ footer p {
   }
 
   .logo {
-    width: 130px;
+    width: 280px;
+  }
+
+  .slogan {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    max-width: 280px;
   }
 
   .titulo {
@@ -1038,9 +1158,7 @@ footer p {
     width: 100%;
     max-width: 280px;
     min-width: auto;
-    flex-direction: row;
-    justify-content: center;
-    padding: 12px 20px;
+    padding: 15px 20px;
   }
 
   .icone-wrapper {
@@ -1053,11 +1171,31 @@ footer p {
     font-size: 13px;
   }
 
+  .icone-diferencial {
+    font-size: 11px;
+    padding-top: 6px;
+  }
+
   .whatsapp-float {
     width: 45px;
     height: 45px;
     font-size: 22px;
     bottom: 15px;
     right: 15px;
+  }
+
+  .selo-confianca {
+    font-size: 11px;
+    padding: 8px 16px;
+    gap: 8px;
+    border-radius: 30px;
+  }
+
+  .selo-confianca .separador {
+    display: none;
+  }
+
+  .selo-confianca i {
+    font-size: 13px;
   }
 }

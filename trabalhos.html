@@ -34,7 +34,10 @@
 
 <body>
   <header>
-    <img src="logo.jpeg" alt="Logo Rodrigo" class="logo">
+    <div class="header-content">
+      <img src="logo.jpeg" alt="Logo Rodrigo" class="logo">
+      <p class="slogan">Transformando tecnologia em soluções desde 2015</p>
+    </div>
     <nav>
       <a href="index.html">Início</a>
       <a href="trabalhos.html" class="active">Trabalhos</a>
@@ -188,7 +191,19 @@
   </a>
 
   <script>
-    document.getElementById('ano').textContent = new Date().getFullYear();
+    // Ano automático com animação
+    document.addEventListener('DOMContentLoaded', function() {
+      const anoElement = document.getElementById('ano');
+      const anoAtual = new Date().getFullYear();
+      
+      anoElement.style.opacity = '0';
+      anoElement.textContent = anoAtual;
+      
+      setTimeout(function() {
+        anoElement.style.transition = 'opacity 0.5s ease';
+        anoElement.style.opacity = '1';
+      }, 300);
+    });
   </script>
 </body>
 

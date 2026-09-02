@@ -34,7 +34,10 @@
 
 <body>
   <header>
-    <img src="logo.jpeg" alt="Logo Rodrigo" class="logo">
+    <div class="header-content">
+      <img src="logo.jpeg" alt="Logo Rodrigo" class="logo">
+      <p class="slogan">Transformando tecnologia em soluções desde 2015</p>
+    </div>
     <nav>
       <a href="index.html">Início</a>
       <a href="trabalhos.html">Trabalhos</a>
@@ -49,8 +52,8 @@
         Preencha o formulário abaixo e entrarei em contato o mais rápido possível!
       </p>
 
-      <!-- Formulário de Contato -->
-      <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; border-left: 4px solid #10b981; max-width: 600px; margin: 0 auto;">
+      <!-- Formulário de Contato com Glassmorphism -->
+      <div style="background: rgba(248, 250, 252, 0.8); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); padding: 30px; border-radius: 15px; border-left: 4px solid #10b981; max-width: 600px; margin: 0 auto; border: 1px solid rgba(255,255,255,0.3);">
         <h3 style="margin-top: 0; border-left: none; padding-left: 0; text-align: center;">
           <i class="fas fa-paper-plane" style="color: #10b981;"></i> 
           Envie sua mensagem
@@ -144,9 +147,25 @@
     </p>
   </footer>
 
+  <!-- ÍCONE FLUTUANTE (APARECE EM TODAS AS PÁGINAS) -->
+  <a href="https://wa.me/5511976817558" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Entrar em contato pelo WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
   <script>
-    // Ano automático no rodapé
-    document.getElementById('ano').textContent = new Date().getFullYear();
+    // Ano automático com animação
+    document.addEventListener('DOMContentLoaded', function() {
+      const anoElement = document.getElementById('ano');
+      const anoAtual = new Date().getFullYear();
+      
+      anoElement.style.opacity = '0';
+      anoElement.textContent = anoAtual;
+      
+      setTimeout(function() {
+        anoElement.style.transition = 'opacity 0.5s ease';
+        anoElement.style.opacity = '1';
+      }, 300);
+    });
 
     document.getElementById('form-contato').addEventListener('submit', function(e) {
       e.preventDefault();
